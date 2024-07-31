@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section className="container p-4 flex flex-col sm:flex-row gap-5 justify-between items-center sm:items-start h-screen relative">
       <div className="order-2 sm:order-1 text-center sm:text-left">
-        <h2 className="text-lg fw-medium pb-2">Hi I&rsquo;m Piyush Shrestha</h2>
+        <h2 className="text-lg fw-medium pb-2">Hi I am Piyush Shrestha</h2>
 
         <h1 className="text-primary fw-bold text-3xl sm:fs-700 mb-4">
           <Typewriter
@@ -38,7 +38,7 @@ const Hero = () => {
         </h1>
         <div className="fs-300 max-w-96 mb-7 fw-medium">
           <span>
-            I'm passionate and a dedicated web developer with a passion for
+            I am passionate and a dedicated web developer with a passion for
             creating dynamic and engaging web applications.
           </span>
         </div>
