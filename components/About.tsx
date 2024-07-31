@@ -1,16 +1,40 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import { ContactDetails } from "@/constants";
 import { ChevronDown, User } from "lucide-react";
 import { motion } from "framer-motion";
 import { Element, Link } from "react-scroll";
+
 const About = () => {
+  const [offset, setOffset] = useState(-80);
+
+  useEffect(() => {
+    // Function to update the offset based on screen width
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setOffset(-30); // Decrease the offset for smaller screens
+      } else {
+        setOffset(-80); // Default offset for larger screens
+      }
+    };
+
+    // Set the initial offset based on the current screen width
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <section className="container relative">
-        {" "}
+      <section className="container relative pb-20">
         <Element name="about">
           <div className="flex justify-center ">
             <h1 className="text-xl font-semibold">About Me</h1>
@@ -182,9 +206,9 @@ const About = () => {
             to="services"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={offset} // Use the dynamic offset value
             duration={500}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
+            className="absolute bottom-20 left-1/2 transform -translate-x-1/2 cursor-pointer"
           >
             <motion.div
               initial={{ opacity: 1 }}

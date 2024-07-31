@@ -96,7 +96,7 @@ const Hero = () => {
         smooth={true}
         offset={-80}
         duration={500}
-        className="absolute bottom-48 left-1/2 transform -translate-x-1/2 cursor-pointer"
+        className="absolute -bottom-10 sm:bottom-48 left-1/2 transform -translate-x-1/2 cursor-pointer"
       >
         <motion.div
           initial={{ opacity: 1 }}
