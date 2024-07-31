@@ -21,7 +21,7 @@ const Hero = () => {
     link.click();
   };
   return (
-    <section className="container p-4 flex flex-col sm:flex-row gap-5 justify-between items-center sm:items-start h-screen relative">
+    <section className="container p-4 flex flex-col sm:flex-row gap-5 justify-between items-center sm:items-start h-auto sm:h-screen relative">
       <div className="order-2 sm:order-1 text-center sm:text-left">
         <h2 className="text-lg fw-medium pb-2">Hi I am Piyush Shrestha</h2>
 
