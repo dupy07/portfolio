@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`items-center bg-background py-3 px-10 md:px-20 lg:px-40 xl:px-56 fixed left-0 z-50 w-full flex justify-between transition-transform duration-300 ${
+      className={`items-center bg-background py-3 container fixed left-0 z-50 w-full flex justify-between transition-transform duration-300 ${
         isAtTop ? "mt-0 shadow-lg sm:shadow-none sm:mt-10" : "mt-0 shadow-lg"
       } ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"

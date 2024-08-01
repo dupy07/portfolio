@@ -25,7 +25,7 @@ export default function RootLayout({
         >
           <main className="">
             <Navbar />
-            <div className="pt-20 sm:pt-40 relative">{children}</div>
+            <div className=" relative">{children}</div>
           </main>
           <Footer />
         </ThemeProvider>

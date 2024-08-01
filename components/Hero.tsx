@@ -5,8 +5,6 @@ import { Button } from "./ui/button";
 import Socials from "./Socials";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
-import { ChevronDown } from "lucide-react";
 import Typewriter from "typewriter-effect";
 
 const MotionButton = motion(Button);
@@ -21,12 +19,8 @@ const Hero = () => {
     link.click();
   };
 
-  const handleScrollToAbout = () => {
-    // No additional logic needed; react-scroll handles the scrolling  alert("clicked hero");
-  };
-
   return (
-    <section className="container p-4 flex flex-col sm:flex-row gap-5 justify-between items-center sm:items-start h-auto sm:h-screen relative">
+    <section className="container pt-24 sm:pt-0 mb-40 flex flex-col sm:flex-row gap-5 justify-normal sm:justify-between items-center h-auto sm:h-screen relative">
       <div className="order-2 sm:order-1 text-center sm:text-left">
         <h2 className="text-lg fw-medium pb-2">Hi I am Piyush Shrestha</h2>
 
@@ -93,34 +87,6 @@ const Hero = () => {
           />
         </div>
       </motion.div>
-
-      {/* Down arrow icon */}
-      <Link
-        to="about"
-        spy={true}
-        smooth={true}
-        offset={-80}
-        duration={500}
-        onClick={handleScrollToAbout}
-        className="absolute -bottom-10 sm:bottom-48 left-1/2 transform -translate-x-1/2 cursor-pointer"
-      >
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            rotate: [0, -10, 10, -10, 10, 0], // Shaky effect
-            scale: [1, 1.2, 1.2, 1.2, 1.2, 1], // Enlarge and shrink back
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 1.5,
-            ease: "easeInOut",
-            repeatDelay: 2, // Time between shakes
-          }}
-          className="flex items-center justify-center"
-        >
-          <ChevronDown className="text-3xl text-primary" />
-        </motion.div>
-      </Link>
     </section>
   );
 };

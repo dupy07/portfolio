@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="mt-32 sm:mt-40">
-        <About />
-        <Services />
-      </div>
+
+      <About />
+      <Services />
+
       <Partner />
     </>
   );
