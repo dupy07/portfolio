@@ -2,7 +2,7 @@
 import { ModeToggle } from "@/components/ui/toggle-mode";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import MobileNav from "./ui/mobile-nav";
 import { Navlinks } from "@/constants/index";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,7 @@ const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (window.scrollY === 0) {
       setIsAtTop(true);
       setIsVisible(true);
@@ -25,14 +25,14 @@ const Navbar = () => {
       setIsAtTop(false);
     }
     setScrollY(window.scrollY);
-  };
+  }, [scrollY]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollY]);
+  }, [handleScroll]);
 
   const linkVariants = {
     hidden: {
