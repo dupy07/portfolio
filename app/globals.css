@@ -220,5 +220,5 @@ svg {
 }
 
 .container {
-  @apply px-1 sm:px-8 md:px-20 lg:px-40 xl:px-52;
+  @apply px-10 md:px-20 lg:px-40 xl:px-52;
 }
