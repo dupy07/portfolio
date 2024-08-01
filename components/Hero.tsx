@@ -20,6 +20,11 @@ const Hero = () => {
     link.download = "resume.jpg"; // File name to be saved as
     link.click();
   };
+
+  const handleScrollToAbout = () => {
+    // No additional logic needed; react-scroll handles the scrolling
+  };
+
   return (
     <section className="container p-4 flex flex-col sm:flex-row gap-5 justify-between items-center sm:items-start h-auto sm:h-screen relative">
       <div className="order-2 sm:order-1 text-center sm:text-left">
@@ -96,6 +101,7 @@ const Hero = () => {
         smooth={true}
         offset={-80}
         duration={500}
+        onClick={handleScrollToAbout}
         className="absolute -bottom-10 sm:bottom-48 left-1/2 transform -translate-x-1/2 cursor-pointer"
       >
         <motion.div

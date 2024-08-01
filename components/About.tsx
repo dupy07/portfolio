@@ -10,16 +10,16 @@ import { Element, Link } from "react-scroll";
 const About = () => {
   const [offset, setOffset] = useState(-80);
 
-  useEffect(() => {
-    // Function to update the offset based on screen width
-    const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setOffset(-30); // Decrease the offset for smaller screens
-      } else {
-        setOffset(-80); // Default offset for larger screens
-      }
-    };
+  // Define the resize handler as a named function
+  const handleResize = () => {
+    if (window.innerWidth < 640) {
+      setOffset(-40); // Decrease the offset for smaller screens
+    } else {
+      setOffset(-80); // Default offset for larger screens
+    }
+  };
 
+  useEffect(() => {
     // Set the initial offset based on the current screen width
     handleResize();
 
@@ -31,6 +31,10 @@ const About = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleScrollToServices = () => {
+    // No additional logic needed; react-scroll handles the scrolling
+  };
 
   return (
     <>
@@ -208,6 +212,7 @@ const About = () => {
             smooth={true}
             offset={offset} // Use the dynamic offset value
             duration={500}
+            onClick={handleScrollToServices}
             className="absolute bottom-20 left-1/2 transform -translate-x-1/2 cursor-pointer"
           >
             <motion.div
