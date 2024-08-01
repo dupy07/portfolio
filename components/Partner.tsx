@@ -49,12 +49,7 @@ const Partner = () => {
           Some brands that’ve tasted the goodness. You might’ve heard of some of
           these.
         </p>
-        <div className="flex gap-4 flex-wrap">
-          <img src="/paypal.svg" alt="" className="src" />
-          <img src="/paypal.svg" alt="" className="src" />
-          <img src="/paypal.svg" alt="" className="src" />
-          <img src="/paypal.svg" alt="" className="src" />
-        </div>
+        <div className="flex gap-4 flex-wrap"></div>
       </div>
     </section>
   );
