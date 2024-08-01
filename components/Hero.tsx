@@ -23,6 +23,7 @@ const Hero = () => {
 
   const handleScrollToAbout = () => {
     // No additional logic needed; react-scroll handles the scrolling
+    alert("clicked hero");
   };
 
   return (
