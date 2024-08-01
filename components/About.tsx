@@ -9,11 +9,11 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <>
-      <section className="container ">
+      <section className="container">
         <div className="flex justify-center ">
           <h1 className="text-xl font-semibold">About Me</h1>
         </div>
-        <section className="min-h-[500px] sm:h-auto mb-10 py-10 px-4 sm:px-5 flex flex-col justify-center sm:justify-between lg:text-left lg:flex-row gap-10">
+        <section className="mb-10 py-10 px-4 sm:px-5 flex flex-col justify-center sm:justify-between lg:flex-row gap-10">
           <motion.div
             className="hidden lg:flex bg-about_shape_light dark:bg-about_shape_dark bg-contain bg-no-repeat min-w-[18rem] h-[18rem] relative"
             animate={{ y: [0, -20, 0] }}
@@ -28,7 +28,7 @@ const About = () => {
               priority
             />
           </motion.div>
-          <div className="flex justify-start sm:justify-center w-full">
+          <div className="flex justify-start sm:justify-center w-full min-h-[400px]">
             <Tabs defaultValue="personal_info" className="w-full">
               <TabsList className="w-full">
                 <motion.div
@@ -59,7 +59,7 @@ const About = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Ducimus debitis dolorum fugiat eaque.
                 </p>
-                <div className="border mt-7 flex flex-col md:grid md:grid-cols-2 gap-4 items-center text-center justify-center">
+                <div className="mt-7 flex flex-col md:grid md:grid-cols-2 gap-4 items-center text-center justify-center">
                   {ContactDetails.map((details) => (
                     <span
                       key={details.key}
@@ -76,10 +76,10 @@ const About = () => {
               </TabsContent>
 
               <TabsContent value="qualification" className="w-full">
-                <h1 className="text-base text-left sm:text-xl font-bold pb-5">
+                <h1 className="text-base sm:text-xl font-bold pb-5">
                   My Awesome Journey
                 </h1>
-                <section className="grid sm:grid-cols-2 gap-5">
+                <section className="grid xs:grid-cols-2 grid-cols-1 gap-5">
                   <div>
                     <div className="flex gap-x-2 text-primary items-center mb-3">
                       <User size={16} />
@@ -119,7 +119,7 @@ const About = () => {
                 </section>
               </TabsContent>
 
-              <TabsContent value="skills" className="w-full text-left">
+              <TabsContent value="skills" className="w-full">
                 <h1 className="text-base sm:text-xl font-bold pb-5">
                   Tools I Use Everyday
                 </h1>
@@ -136,7 +136,7 @@ const About = () => {
                   <h3 className="fs-500 fw-semi-bold border-b text-primary">
                     Tools
                   </h3>
-                  <div className="flex gap-4 mt-3">
+                  <div className="flex gap-4 mt-3 justify-center">
                     <Image
                       src={"/vscode.svg"}
                       alt="vscode"
