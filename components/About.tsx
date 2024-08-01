@@ -33,7 +33,7 @@ const About = () => {
   }, []);
 
   const handleScrollToServices = () => {
-    alert("clicked about section link");
+    // No additional logic needed; react-scroll handles the scrolling
   };
 
   return (
