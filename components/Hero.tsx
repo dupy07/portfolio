@@ -20,7 +20,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="container pt-24 sm:pt-0 mb-40 flex flex-col sm:flex-row gap-5 justify-normal sm:justify-between items-center h-auto sm:h-screen relative">
+    <section
+      className="container pt-28 xl:pt-0
+ mb-40 flex flex-col sm:flex-row gap-5 justify-normal sm:justify-between items-center h-auto sm:h-screen relative"
+    >
       <div className="order-2 sm:order-1 text-center sm:text-left">
         <h2 className="text-lg fw-medium pb-2">Hi I am Piyush Shrestha</h2>
 
@@ -78,11 +81,11 @@ const Hero = () => {
          w-[14rem] h-[13rem] md:w-[16rem] md:h-[15rem] lg:w-[19rem] lg:h-[18rem]"
         >
           <Image
-            src={"/hero-profile.png"}
+            src={"/hero-profile1.png"}
             alt="profile"
             height={700}
             width={700}
-            className="h-[207px] w-72 md:h-[235px] md:w-96 lg:h-[282px] lg:w-96"
+            className="h-[219px] md:h-[252px] lg:h-[302px] "
             priority
           />
         </div>

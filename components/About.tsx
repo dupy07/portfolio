@@ -20,11 +20,11 @@ const About = () => {
             transition={{ repeat: Infinity, duration: 5 }}
           >
             <Image
-              src={"/about-profile.png"}
+              src={"/about-profile1.png"}
               alt="profile"
               height={700}
               width={700}
-              className="h-[280px] w-72"
+              className="h-[308px] w-96"
               priority
             />
           </motion.div>
@@ -53,11 +53,11 @@ const About = () => {
 
               <TabsContent value="personal_info" className="w-full">
                 <h1 className="text-base sm:text-xl font-bold">
-                  Unmatched Service Quality for Over 10 Years
+                  Web developer specializing in Next.js and UI/UX design.
                 </h1>
                 <p className="fs-300 text-muted-foreground mt-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus debitis dolorum fugiat eaque.
+                  I am a passionate and dedicated full stack developer with a
+                  strong foundation in HTML, CSS, Javascript and React js.
                 </p>
                 <div className="mt-7 flex flex-col md:grid md:grid-cols-2 gap-4 items-center text-center justify-center">
                   {ContactDetails.map((details) => (
