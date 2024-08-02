@@ -1,4 +1,12 @@
-import { User, Mail, BookOpen, Phone, Calendar, MapPinned } from "lucide-react";
+import {
+  User,
+  Mail,
+  BookOpen,
+  Phone,
+  Calendar,
+  MapPinned,
+  Linkedin,
+} from "lucide-react";
 
 export const Navlinks = [
   { name: "Home", href: "/", key: "Home" },
@@ -31,23 +39,18 @@ export const ContactDetails: ContactDetail[] = [
     key: "email",
   },
   {
+    icon: Linkedin,
+    text: "www.linkedin.com/in/piyush-xtha",
+    key: "linkedin",
+  },
+  {
     icon: BookOpen,
     text: "Bachelor on Computer Application",
     key: "education",
   },
   {
-    icon: Phone,
-    text: "+977 9803376882",
-    key: "phone",
-  },
-  {
     icon: Calendar,
     text: "Born on 11 Feb, 2002",
     key: "dob",
-  },
-  {
-    icon: MapPinned,
-    text: "Jorpati, Kathmandu",
-    key: "address",
   },
 ];

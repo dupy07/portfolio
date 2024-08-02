@@ -136,7 +136,7 @@ const About = () => {
                   <h3 className="fs-500 fw-semi-bold border-b text-primary">
                     Tools
                   </h3>
-                  <div className="flex gap-4 mt-3 justify-center">
+                  <div className="flex gap-4 mt-3 justify-center sm:justify-start">
                     <Image
                       src={"/vscode.svg"}
                       alt="vscode"
